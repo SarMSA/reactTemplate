@@ -1,0 +1,229 @@
+:root {
+  --hard-color: #393D30;
+  --med-color: #7F6848;
+  --light-color: #917957;
+  --hard2-color: #1E2B1B;
+  --med2-color: #D9A075;
+  --light2-color: #CAB19D;
+  --fontColor: #FBFCF8;
+  --gradientBack: linear-gradient(90deg, rgba(217, 160, 117, 1) 0%, rgba(229, 175, 129, 1) 100%);
+  --filterColor: invert(30%) sepia(8%) saturate(1623%) hue-rotate(354deg) brightness(50%) contrast(94%);
+  --borderColor: #cf8f61;
+  --leafColor:invert(61%) sepia(28%) saturate(275%) hue-rotate(357deg) brightness(93%) contrast(92%);
+
+  ;
+}
+* {
+  transition: all ease 0.5s !important;
+}
+.medBackground {
+  background-color: var(--med-color);
+}
+.body {
+  background-color: var(--light-color) !important;
+}
+.maincolor{
+  background-color: white !important;
+
+}
+.superColor{
+  background-color: var(--hard-color) !important;
+}
+.colorFont{
+  color: var(--hard-color) !important;
+}
+.lightFont {
+  color: var(--light-color) !important;
+
+}
+.medFont {
+  color: var(--med-color) !important;
+
+}
+/* start section Navbar */
+nav img {
+  width: 50px;
+  height: 70px;
+}
+/* end section Navbar */
+
+/*start section about */
+section:nth-of-type(2) .info::before {
+content: "";
+position: absolute;
+width: 1500px;  /*1500px */
+height: 800px;  /*800px */
+bottom: 0;
+right:-220px;  /*220px */
+z-index: -1;
+background: url(../src/assets/backgroundImage.svg) no-repeat;
+transform: rotate(30deg) scale(.5);
+filter: var(--leafColor);
+}
+@media (min-width: 768px) {
+  section:nth-of-type(2) .info::before {
+
+    right: -70px; 
+  }
+
+}
+@media (min-width: 992px) {
+  section:nth-of-type(2) .info::before {
+    bottom: 95px;
+    right: -240px; 
+  }
+
+}
+@media (min-width: 1200px) {
+  section:nth-of-type(2) .info::before {
+    bottom: 40px;
+    right: -135px; 
+  }
+
+}
+@media (min-width: 1400px) {
+  section:nth-of-type(2) .info::before {
+    bottom: 40px;
+    right: -25px; 
+  }
+
+}
+.aboutLink{
+  text-decoration: none;
+  color: var(--hard-color);
+  font-weight: 700;
+  border-bottom: 2px solid var(--hard-color);
+  padding-bottom: 3px;
+}
+.about h1 strong {
+  color: var(--hard2-color);
+  font-weight: 800;
+  font-size: 3rem;
+  left: 15%;
+  top: 27%;
+}
+.about .image {
+  max-height: 600px;
+  padding: 0 3rem 0 3rem;
+  border-radius: 50% 50% 0 0;
+}
+.about .info > div,
+.about .info > p{
+  margin-bottom: 3rem;
+}
+.about .info > div:last-of-type {
+  margin-bottom: 0;
+}
+
+.about .parent {
+  max-width: 100%;
+  @media (min-width: 768px) and (max-width: 991px) {
+    align-self: center;
+    /* justify-self: center; */
+    width: 75%;
+    /* display: flex; */
+    
+  }
+}
+.about .borderPerson {
+  position: absolute;
+  height: 83%;
+  width: 81%;
+  z-index: 100;
+  border-radius: 50% 50% 0 0;
+  top: 0;
+  right: -17px;
+  border: 3px solid var(--borderColor);
+}
+.about .image img {
+  @media (max-width: 991px) {
+    max-height: 600px;
+    min-height: 600px;
+    position: relative;
+    padding-top: 8rem;
+    
+  }
+  /* @media (min-width:992px) {
+      max-height: none;
+      min-height: none;
+      padding-top: 0;
+  } */
+}
+
+/*end section about */
+/* start section services */
+
+/* jobCard */
+.services .jobCard .centerLine {
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+  }
+
+
+}
+.services .jobCard .content{
+  margin-bottom: 3rem;
+  text-align: center;
+
+}
+.services .jobCard .iconParant {
+  position: absolute;
+  left: 49.5%;
+  bottom: 100%;
+  margin-left: -16px;
+  @media (min-width: 992px) {
+    bottom: 50%;
+  }
+
+}
+.services .jobCard .icon>div {
+
+  outline: 5px solid var(--light-color);
+}
+.services .jobCard .info {
+  margin: 20px 20px 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--hard-color);
+  background-color: var(--med-color);
+  border-radius: 10px;
+}
+.services .jobCard .infoParant {
+  width: 100%;
+  @media (min-width: 992px) {
+    
+    width: 70%;
+  }
+  @media (min-width: 1200px) {
+    
+    width: 60%;
+  }
+  
+
+
+}
+/* end section services */
+/* start section portifolio */
+
+.protifolio .buttons button{
+  border: 1px solid var(--fontColor);
+  color: var(--fontColor)
+
+}
+.protifolio .buttons button.active, 
+.protifolio .buttons button:hover{
+  color: var(--light-color);
+  background-color: var(--hard-color);
+  transform: scale(1.05);
+  border: 1px solid var(--hard-color);
+  
+}
+.protifolio .imageContainer:hover {
+  transform: scale(1.1);
+}
+
+/* end section portifolio */
